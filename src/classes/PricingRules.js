@@ -118,6 +118,9 @@ export default class PricingRules {
 					else if(pGroup.property === 'imageSizeScaled') { //for image in all views
 						property = targetElem.getType() === 'image' && targetElem.title ? {width: targetElem.width * targetElem.scaleX, height: targetElem.height * targetElem.scaleY} : null;
 					}
+					else if (pGroup.property === 'printableSizeScaled') { //for image in all views
+						property = (targetElem.text || targetElem.getType() === 'image') && targetElem.title ? { targetElem, width: targetElem.width * targetElem.scaleX, height: targetElem.height * targetElem.scaleY } : null;
+					}
 					else if(pGroup.property === 'canvasSize') { //views: all
 						property = {width: pixelToUnit(targetElem.options.stageWidth, unitFormat), height: pixelToUnit(targetElem.options.stageHeight, unitFormat) };
 					}
