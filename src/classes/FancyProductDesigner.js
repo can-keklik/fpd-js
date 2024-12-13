@@ -2504,6 +2504,8 @@ export default class FancyProductDesigner extends EventTarget {
 	calculatePrice(considerQuantity = true, triggerEvent = true) {
 		this.#calculateViewsPrice();
 
+		const prevPrice = this.currentPrice;
+
 		let calculatedPrice = this.singleProductPrice;
 		this.currentPrice = calculatedPrice;
 

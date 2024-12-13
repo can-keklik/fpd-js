@@ -164,10 +164,15 @@ export default class PricingRules {
 
 	#loopPricingGroup(pRule, index) {
 
-		if(this.#condition(pRule.operator, pRule.property, pRule.value)) {
+		if(typeof pRule.price === 'function') {
+			this.fpdInstance.pricingRulesPrice += pRule.price(pRule.property);
+			return true;
+		}
+		else if(this.#condition(pRule.operator, pRule.property, pRule.value)) {
 
 			if(typeof pRule.price === 'number') {
 				this.fpdInstance.pricingRulesPrice += pRule.price;
+				
 			}
 			return true;
 		}
