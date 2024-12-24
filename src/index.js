@@ -1,2 +1,4 @@
 import './ui/less/main.less';
-import './classes/FancyProductDesigner.js';
+import FancyProductDesigner from './classes/FancyProductDesigner.js';
+
+export { FancyProductDesigner as fpd };

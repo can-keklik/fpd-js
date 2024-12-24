@@ -1,4 +1,4 @@
-import html from '../../html/modules/layouts.html';
+import html from '../../html/modules/layouts.html?raw';
 
 class LayoutsView extends HTMLElement {
     

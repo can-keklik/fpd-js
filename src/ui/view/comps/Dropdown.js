@@ -1,4 +1,4 @@
-import html from '../../../ui/html/comps/dropdown.html';
+import html from '../../../ui/html/comps/dropdown.html?raw';
 
 class FPD_Dropdown extends HTMLElement {
     

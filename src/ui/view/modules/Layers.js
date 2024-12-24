@@ -1,4 +1,4 @@
-import html from '../../html/modules/layers.html';
+import html from '../../html/modules/layers.html?raw';
 
 class LayersView extends HTMLElement {
     

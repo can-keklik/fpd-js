@@ -1,4 +1,4 @@
-import html from '../html/views-nav.html';
+import html from '../html/views-nav.html?raw';
 
 class ViewsNav extends HTMLElement {
     

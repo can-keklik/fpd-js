@@ -1,4 +1,4 @@
-import html from '../../html/modules/designs.html';
+import html from '../../html/modules/designs.html?raw';
 
 class DesignsView extends HTMLElement {
     

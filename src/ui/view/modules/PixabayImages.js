@@ -1,4 +1,4 @@
-import html from '../../html/modules/pixabay-images.html';
+import html from '../../html/modules/pixabay-images.html?raw';
 
 class PixabayImagesView extends HTMLElement {
     

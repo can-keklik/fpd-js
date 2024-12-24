@@ -1,4 +1,4 @@
-import html from '../html/actions-bar.html';
+import html from '../html/actions-bar.html?raw';
 
 class ActionsBar extends HTMLElement {
     
