@@ -7,7 +7,9 @@
     "test": "test"
   },
   "exports": {
-    ".": "./src/classes/FancyProductDesigner.js"
+    ".": "./src/index.js",
+    "./styles": "./src/index.less",
+    "./utils": "./src/helpers/utils.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
