@@ -1,4 +1,5 @@
-<div class="fpd-close-sub-panel">
+export default (
+`<div class="fpd-close-sub-panel">
     <span class="fpd-icon-back"></span>
     <span class="fpd-label" data-defaulttext="Back">toolbar.sub_panel_back</span>
 </div>
@@ -539,4 +540,4 @@
         
     </div><!-- Advanced Editing -->
 
-</div>
+</div>`)

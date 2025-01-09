@@ -1,4 +1,5 @@
-<div data-pos="left">
+export default (
+`<div data-pos="left">
     <fpd-actions-menu data-font-icon="fpd-icon-menu"></fpd-actions-menu>
 </div>
 <div data-pos="center">
@@ -16,4 +17,4 @@
     <span class="fpd-btn fpd-close">
         <i class="fpd-icon-close"></i>
     </span>
-</div>
+</div>`)

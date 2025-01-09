@@ -1,4 +1,5 @@
-<div 
+export default (
+`<div 
     data-moduleicon="fpd-icon-name-number" 
     data-defaulttext="Names & Numbers" 
     data-title="modules.names_numbers"
@@ -9,4 +10,4 @@
     <div class="fpd-scroll-area">
         <div class="fpd-list"></div>
     </div>
-</div>
+</div>`)

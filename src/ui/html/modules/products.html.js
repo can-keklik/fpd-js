@@ -1,4 +1,5 @@
-<div data-moduleicon="fpd-icon-grid" data-defaulttext="Swap Product" data-title="modules.products">
+export default (
+`<div data-moduleicon="fpd-icon-grid" data-defaulttext="Swap Product" data-title="modules.products">
     <fpd-dropdown
         class="fpd-product-categories"
         searchable
@@ -7,4 +8,4 @@
         <div class="fpd-grid fpd-grid-contain fpd-padding">
         </div>
     </div>
-</div>
+</div>`)

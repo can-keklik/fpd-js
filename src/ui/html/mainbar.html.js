@@ -1,4 +1,5 @@
-<div class="fpd-navigation fpd-scrollbar-hidden"></div>
+export default (
+`<div class="fpd-navigation fpd-scrollbar-hidden"></div>
 <div class="fpd-module-content"></div>
 <div class="fpd-secondary-content">
     <div class="fpd-upload-zone-panel">
@@ -30,7 +31,4 @@
             <span class="fpd-icon-close"></span>
         </div>
     </div>
-</div>
-
-
-
+</div>`)

@@ -1,4 +1,5 @@
-<div class="fpd-head">
+export default (
+`<div class="fpd-head">
     <span class="fpd-btn fpd-add-blank fpd-hidden" data-defaulttext="Add Blank Page">misc.dynamic_views_add_blank</span>
     <span class="fpd-btn fpd-add-layout" data-defaulttext="Add Page from Layouts">misc.dynamic_views_add_from_layouts</span>
     <div class="fpd-close">
@@ -36,4 +37,4 @@
     <div class="fpd-scroll-area">
         <div class="fpd-grid"></div>
     </div>
-</div>
+</div>`)

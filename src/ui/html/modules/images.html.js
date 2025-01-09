@@ -1,4 +1,5 @@
-<div data-moduleicon="fpd-icon-images" data-defaulttext="Add Image" data-title="modules.images">
+export default (
+`<div data-moduleicon="fpd-icon-images" data-defaulttext="Add Image" data-title="modules.images">
 
     <div class="fpd-module-tabs">
         <div data-context="upload" class="fpd-active fpd-tooltip" data-defaulttext="Uploads" title="modules.uploads">
@@ -30,4 +31,4 @@
         <div data-context="text2Img"></div>
     </div>
 
-</div><!-- Images Module -->
+</div>`)

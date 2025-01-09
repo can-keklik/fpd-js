@@ -1,4 +1,5 @@
-<div class="fpd-loader-wrapper">
+export default (
+`<div class="fpd-loader-wrapper">
     <div class="fpd-loader">
         <div class="fpd-loader-circle"></div>
     </div>
@@ -20,4 +21,4 @@
 </div>
 <div class="fpd-scroll-area">
     <div class="fpd-grid fpd-grid-cover fpd-photo-grid"></div>
-</div>
+</div>`)

@@ -1,4 +1,5 @@
-<div data-moduleicon="fpd-icon-design-library" data-defaulttext="Add Designs" data-title="modules.designs">
+export default (
+`<div data-moduleicon="fpd-icon-design-library" data-defaulttext="Add Designs" data-title="modules.designs">
     <div class="fpd-head">
         <div class="fpd-input-back-search">
             <div class="fpd-back fpd-btn">
@@ -13,4 +14,4 @@
     <div class="fpd-scroll-area">
         <div class="fpd-grid fpd-grid-contain fpd-padding"></div>
     </div>
-</div>
+</div>`)

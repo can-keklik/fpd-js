@@ -1,4 +1,5 @@
-<div data-moduleicon="fpd-icon-brush" data-defaulttext="Free Drawing" data-title="plus.drawing">
+export default (
+`<div data-moduleicon="fpd-icon-brush" data-defaulttext="Free Drawing" data-title="plus.drawing">
     <div class="fpd-drawing-panel fpd-padding">
         <div class="fpd-scroll-area">
 
@@ -40,4 +41,4 @@
 
         </div>
     </div>
-</div>
+</div>`)

@@ -1,4 +1,5 @@
-<div class="fpd-view-edit-size fpd-hidden">
+export default (
+`<div class="fpd-view-edit-size fpd-hidden">
     <label class="fpd-input">
         <span>W</span>
         <input type="number" min="1" step="1" data-type="width" class="fpd-tooltip">
@@ -22,4 +23,4 @@
 </div>
 <div class="fpd-view-next">
     <span class="fpd-icon-forward"></span>
-</div>
+</div>`)
