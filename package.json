@@ -7,8 +7,8 @@
     "test": "test"
   },
   "exports": {
-    ".": "./dist-vite/index.js",
-    "./styles": "./dist-vite/index.css",
+    ".": "./src/index.js",
+    "./styles": "./src/index.less",
     "./utils": "./src/helpers/utils.js"
   },
   "scripts": {
@@ -55,13 +55,11 @@
     "yargs": "^17.7.2"
   },
   "dependencies": {
-    "@vitejs/plugin-vue": "^5.2.1",
     "downloadjs": "^1.4.7",
     "fabric": "5.3.0",
     "qrious": "^4.0.2",
     "tinycolor2": "^1.6.0",
     "vanilla-picker": "^2.12.2",
-    "vite-plugin-vue-devtools": "^7.7.0",
     "webfontloader": "^1.6.28"
   }
 }
