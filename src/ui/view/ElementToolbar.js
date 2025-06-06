@@ -1,4 +1,4 @@
-import html from '../html/element-toolbar.html?raw';
+import html from '../html/element-toolbar.html.js';
 
 class ElementToolbar extends HTMLElement {
     

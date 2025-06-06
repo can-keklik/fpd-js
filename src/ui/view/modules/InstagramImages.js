@@ -1,4 +1,4 @@
-import html from '../../html/modules/instagram-images.html?raw';
+import html from '../../html/modules/instagram-images.html.js';
 
 class InstagramImagesView extends HTMLElement {
     

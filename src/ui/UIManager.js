@@ -1,7 +1,7 @@
 import './view/comps/Dropdown.js';
 import './view/comps/RangeSlider.js';
 import './view/comps/ActionsMenu.js';
-import MainLoaderHTML from './html/main-loader.html?raw';
+import MainLoaderHTML from './html/main-loader.html.js';
 import Mainbar from './controller/Mainbar.js';
 import MainWrapper from './controller/MainWrapper.js';
 import ActionsBar from './controller/ActionsBar.js';

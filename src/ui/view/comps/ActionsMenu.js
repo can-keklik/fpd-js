@@ -1,5 +1,5 @@
 import { addElemClasses, addEvents, removeElemClasses, toggleElemClasses } from '../../../helpers/utils';
-import html from '../../../ui/html/comps/actions-menu.html?raw';
+import html from '../../../ui/html/comps/actions-menu.html.js';
 import ActionsBar from '../../controller/ActionsBar';
 
 class FPD_ActionsMenu extends HTMLElement {

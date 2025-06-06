@@ -1,4 +1,4 @@
-import html from '../../html/modules/text-to-image.html?raw';
+import html from '../../html/modules/text-to-image.html.js';
 
 class TextToImageView extends HTMLElement {
     

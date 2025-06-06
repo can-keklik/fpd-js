@@ -1,4 +1,4 @@
-import html from '../../html/modules/products.html?raw';
+import html from '../../html/modules/products.html.js';
 
 class ProductsView extends HTMLElement {
     

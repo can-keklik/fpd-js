@@ -1,4 +1,4 @@
-import html from '../../html/modules/facebook-images.html?raw';
+import html from '../../html/modules/facebook-images.html.js';
 
 class FacebookImagesView extends HTMLElement {
     

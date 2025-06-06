@@ -1,4 +1,4 @@
-import html from '../html/main-wrapper.html?raw';
+import html from '../html/main-wrapper.html.js';
 
 class MainWrapper extends HTMLElement {
     

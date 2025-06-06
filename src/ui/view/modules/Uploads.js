@@ -1,4 +1,4 @@
-import html from '../../html/modules/uploads.html?raw';
+import html from '../../html/modules/uploads.html.js';
 
 class UploadsView extends HTMLElement {
     

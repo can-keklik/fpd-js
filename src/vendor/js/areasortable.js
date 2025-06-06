@@ -9,6 +9,7 @@
 const r = function (root, name, factory) {
     "use strict";
     const _f = factory();
+    /*
     if ('object' === typeof exports)
         // CommonJS module
         module.exports = _f
@@ -17,7 +18,7 @@ const r = function (root, name, factory) {
         define(function (req) { return _f });
     else
         root[name] = _f;
-    
+    */
     return _f;
 }('undefined' !== typeof self ? self : this, 'AreaSortable', function (undef) {
     "use strict";

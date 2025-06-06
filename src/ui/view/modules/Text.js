@@ -1,4 +1,4 @@
-import html from '../../html/modules/text.html?raw';
+import html from '../../html/modules/text.html.js';
 
 class TextView extends HTMLElement {
     

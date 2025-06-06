@@ -2,19 +2,21 @@
   "name": "fpd-js",
   "version": "1.0.0",
   "description": "\"# fpd-js\"",
+  "type": "module",
   "directories": {
     "example": "examples",
     "test": "test"
   },
   "exports": {
-    ".": "./src/index.js",
+    ".": "./dist/FancyProductDesigner.js",
     "./styles": "./src/index.less",
     "./utils": "./src/helpers/utils.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --progress --watch --config webpack.config.js",
-    "start": "webpack serve --open"
+    "start": "webpack serve --open",
+    "rollup": "rollup" 
   },
   "repository": {
     "type": "git",
@@ -52,12 +54,15 @@
     "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^4.11.1",
     "webpack-stream": "^7.0.0",
-    "yargs": "^17.7.2"
+    "yargs": "^17.7.2",
+    "rollup": "^4.41.1"
   },
   "dependencies": {
+    "@wcj/rollup-plugin-less": "^2.0.0",
     "downloadjs": "^1.4.7",
     "fabric": "5.3.0",
     "qrious": "^4.0.2",
+    "rollup": "^4.41.1",
     "tinycolor2": "^1.6.0",
     "vanilla-picker": "^2.12.2",
     "webfontloader": "^1.6.28"

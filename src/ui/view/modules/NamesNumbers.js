@@ -1,4 +1,4 @@
-import html from '../../html/modules/names-numbers.html?raw';
+import html from '../../html/modules/names-numbers.html.js';
 
 class NamesNumbersView extends HTMLElement {
     

@@ -1,4 +1,4 @@
-import html from '../../html/modules/qr-code.html?raw';
+import html from '../../html/modules/qr-code.html.js';
 
 class QRCodeView extends HTMLElement {
     

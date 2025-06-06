@@ -1,4 +1,4 @@
-import html from '../html/views-grid.html?raw';
+import html from '../html/views-grid.html.js';
 
 class ViewsGrid extends HTMLElement {
     

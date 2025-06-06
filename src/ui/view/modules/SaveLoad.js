@@ -1,4 +1,4 @@
-import html from '../../html/modules/save-load.html?raw';
+import html from '../../html/modules/save-load.html.js';
 
 class SaveLoadView extends HTMLElement {
     

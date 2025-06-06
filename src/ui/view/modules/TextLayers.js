@@ -1,4 +1,4 @@
-import html from '../../html/modules/text-layers.html?raw';
+import html from '../../html/modules/text-layers.html.js';
 
 class TextLayersView extends HTMLElement {
     
