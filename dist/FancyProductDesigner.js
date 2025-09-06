@@ -20895,12 +20895,18 @@ let FancyProductDesigner$1 = class FancyProductDesigner extends EventTarget {
 				this.mainTooltip.innerHTML = label;
 				this.mainTooltip.classList.add("fpd-show");
 			} else if (this.mainOptions.sizeTooltip) {
-				const displaySize = this.calcDisplaySize(element);
-				let displayText = displaySize.width + "x" + displaySize.height + displaySize.unit;
+				// We use a different than upstream display size calculation method
+				// const displaySize = this.calcDisplaySize(element);
+				let width = (element.getScaledWidth() / this.currentViewInstance.options.printingBox.width) * this.currentViewInstance.options.output.width;
+				let height = (element.getScaledHeight() / this.currentViewInstance.options.printingBox.height) * this.currentViewInstance.options.output.height;
+				
+				let displayText = width.toFixed(2) + "x" + height.toFixed(2) + " " + this.mainOptions.rulerUnit;
 
+				/*
 				if (displaySize.dpi) {
 					displayText += " | DPI:" + displaySize.dpi;
 				}
+				*/
 
 				this.mainTooltip.innerHTML = displayText;
 				this.mainTooltip.classList.add("fpd-show");
