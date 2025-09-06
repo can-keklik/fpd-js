@@ -14,7 +14,7 @@ export default (
         <div data-context="pixabay" class="fpd-hidden fpd-tooltip" aria-label="Pixabay">
              <span class="fpd-icon-pixabay"></span>
         </div>
-        <div data-context="qr-code" class="fpd-tooltip" data-defaulttext="QR-Code" title="actions.qr_code">
+        <div data-context="qr-code" class="fpd-hidden fpd-tooltip" data-defaulttext="QR-Code" title="actions.qr_code">
             <span class="fpd-icon-qrcode"></span>
        </div>
        <div data-context="text2Img" class="fpd-hidden fpd-tooltip" data-defaulttext="Text to Images" title="modules.text_to_images">

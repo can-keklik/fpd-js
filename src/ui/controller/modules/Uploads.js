@@ -115,7 +115,8 @@ export default class UploadsModule extends EventTarget {
         ); 
         
         //window.localStorage.removeItem('fpd_uploaded_images');
-        //get stored uploaded images from browser storage        
+        //get stored uploaded images from browser storage - DISABLED
+        /*
         if(localStorageAvailable() && window.localStorage.getItem('fpd_uploaded_images')) {
         
             const storageImages = JSON.parse(window.localStorage.getItem('fpd_uploaded_images'));
@@ -142,6 +143,7 @@ export default class UploadsModule extends EventTarget {
             window.localStorage.setItem('fpd_uploaded_images', JSON.stringify(storageImages));
         
         }
+        */
         
     }
     
@@ -451,6 +453,8 @@ export default class UploadsModule extends EventTarget {
     
     #storeUploadedImage(url, title) {
     
+        // Disabled localStorage storage for previously uploaded images
+        /*
         if(localStorageAvailable()) {
     
             var savedLocalFiles = window.localStorage.getItem('fpd_uploaded_images') ? JSON.parse(window.localStorage.getItem('fpd_uploaded_images')) : [],
@@ -463,6 +467,7 @@ export default class UploadsModule extends EventTarget {
             window.localStorage.setItem('fpd_uploaded_images', JSON.stringify(savedLocalFiles))
     
         }
+        */
     
     }
     
@@ -511,10 +516,13 @@ export default class UploadsModule extends EventTarget {
                 
                 if(!thumbnail.classList.contains('fpd-loading')) {
                     
+                    // Disabled localStorage storage for previously uploaded images
+                    /*
                     var storageImages = JSON.parse(window.localStorage.getItem('fpd_uploaded_images'));
     
                     storageImages.splice(index, 1);
                     window.localStorage.setItem('fpd_uploaded_images', JSON.stringify(storageImages));
+                    */
                     
                     if(thumbnail.xhr) {
                         thumbnail.xhr.abort();

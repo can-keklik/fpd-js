@@ -2,7 +2,7 @@ import tinycolor from 'tinycolor2';
 import { fabric as fabric$1 } from 'fabric';
 import WebFont from 'webfontloader';
 import Picker from 'vanilla-picker/csp';
-import QRious from 'qrious';
+import 'qrious';
 import download from 'downloadjs';
 
 const Modal = (htmlContent='', fullscreen=false, type='', container=document.body) => {
@@ -8460,94 +8460,6 @@ class QRCodeView extends HTMLElement {
 
 customElements.define( 'fpd-module-qr-code', QRCodeView );
 
-class QRCodeModule extends EventTarget {
-
-    constructor(fpdInstance, wrapper) {
-
-        super();
-
-        this.fpdInstance = fpdInstance;
-        this.darkColor = '#000';
-        this.lightColor = '#fff';
-
-        this.container = document.createElement("fpd-module-qr-code");
-        wrapper.append(this.container);
-
-        const colorDarkElem = this.container.querySelector('.fpd-qr-code-color-dark');
-        colorDarkElem.style.backgroundColor = '#000';
-        new Picker({
-            parent: colorDarkElem,
-            popup: 'bottom',
-            alpha: false,
-            color: this.darkColor,
-            onChange: (color) => {
-                
-                this.darkColor = tinycolor(color.rgbaString).toHexString();                
-                colorDarkElem.style.backgroundColor = this.darkColor;
-                
-                
-    
-            }
-        });
-
-        const colorLightElem = this.container.querySelector('.fpd-qr-code-color-light');
-        colorLightElem.style.backgroundColor = this.lightColor;
-        new Picker({
-            parent: colorLightElem,
-            popup: 'bottom',
-            alpha: false,
-            color: this.lightColor,
-            onChange: (color) => {
-                
-                this.lightColor = tinycolor(color.rgbaString).toHexString();
-                colorLightElem.style.backgroundColor = this.lightColor;
-    
-            }
-        });
-
-        addEvents(
-            this.container.querySelector('.fpd-btn'),
-            'click',
-            (evt) => {
-
-                fireEvent(this, 'qrCodeModuleBtnClick');                
-
-                const text = this.container.querySelector('input[type="text"]').value;
-                
-                if(text && text.length > 0) {
-                    
-                    const qr = new QRious({
-                        background: this.lightColor,
-                        backgroundAlpha: 1,
-                        foreground: this.darkColor,
-                        foregroundAlpha: 1,
-                        size: 500,
-                        value: this.container.querySelector('input[type="text"]').value
-                    });
-
-                    const options = deepMerge(
-                        fpdInstance.mainOptions.qrCodeProps,
-                        {
-                            _addToUZ: fpdInstance.currentViewInstance.currentUploadZone,
-                            _isQrCode: true
-                        }
-                    );
-
-                    fpdInstance._addCanvasImage(
-                        qr.toDataURL(),
-                        'QR-Code: ' + text,
-                        options
-                    );                        
-
-                }
-
-            }
-        );
-
-    }
-
-}
-
 var html$i = (
 `<div data-moduleicon="fpd-icon-save" data-defaulttext="Saved Designs" data-title="modules.save_load">
     <div class="fpd-save-design">
@@ -9254,38 +9166,7 @@ class ActionsBar extends EventTarget {
 			this.fpdInstance.guidedTour.start();
 
 		}
-		else if (action === 'qr-code') {
-
-			const existingModal = this.fpdInstance.container.querySelector('.fpd-modal-internal');
-			if(existingModal)
-				existingModal.remove();
-			
-			const modal = Modal(
-				'',
-				false,
-				'',
-				this.fpdInstance.container
-			);
-			
-			const qrCodeModule = new QRCodeModule(
-				this.fpdInstance,
-				modal.querySelector('.fpd-modal-content') 
-			);
-
-			this.fpdInstance.translator.translateArea(modal);
-
-			addEvents(
-				qrCodeModule,
-				'qrCodeModuleBtnClick',
-				() => {
-
-					modal.remove();
-					
-				}
-			);
-
-			
-		}
+		else if (action === 'qr-code') ;
 		else if (action === 'save-load') {
 
 			const existingModal = this.fpdInstance.container.querySelector('.fpd-modal-internal');
@@ -10502,7 +10383,7 @@ var html$d = (
         <div data-context="pixabay" class="fpd-hidden fpd-tooltip" aria-label="Pixabay">
              <span class="fpd-icon-pixabay"></span>
         </div>
-        <div data-context="qr-code" class="fpd-tooltip" data-defaulttext="QR-Code" title="actions.qr_code">
+        <div data-context="qr-code" class="fpd-hidden fpd-tooltip" data-defaulttext="QR-Code" title="actions.qr_code">
             <span class="fpd-icon-qrcode"></span>
        </div>
        <div data-context="text2Img" class="fpd-hidden fpd-tooltip" data-defaulttext="Text to Images" title="modules.text_to_images">
@@ -10678,7 +10559,8 @@ class UploadsModule extends EventTarget {
         ); 
         
         //window.localStorage.removeItem('fpd_uploaded_images');
-        //get stored uploaded images from browser storage        
+        //get stored uploaded images from browser storage - DISABLED
+        /*
         if(localStorageAvailable() && window.localStorage.getItem('fpd_uploaded_images')) {
         
             const storageImages = JSON.parse(window.localStorage.getItem('fpd_uploaded_images'));
@@ -10696,15 +10578,16 @@ class UploadsModule extends EventTarget {
         
                     storageImages.forEach((storedImg, key) => {
                         storageImages.splice(key, 1);
-                    });
+                    })
         
-                };
+                }
         
             });
 
             window.localStorage.setItem('fpd_uploaded_images', JSON.stringify(storageImages));
         
         }
+        */
         
     }
     
@@ -11014,6 +10897,8 @@ class UploadsModule extends EventTarget {
     
     #storeUploadedImage(url, title) {
     
+        // Disabled localStorage storage for previously uploaded images
+        /*
         if(localStorageAvailable()) {
     
             var savedLocalFiles = window.localStorage.getItem('fpd_uploaded_images') ? JSON.parse(window.localStorage.getItem('fpd_uploaded_images')) : [],
@@ -11023,9 +10908,10 @@ class UploadsModule extends EventTarget {
                 };
     
             savedLocalFiles.push(imgObj);
-            window.localStorage.setItem('fpd_uploaded_images', JSON.stringify(savedLocalFiles));
+            window.localStorage.setItem('fpd_uploaded_images', JSON.stringify(savedLocalFiles))
     
         }
+        */
     
     }
     
@@ -11070,14 +10956,17 @@ class UploadsModule extends EventTarget {
                 evt.stopPropagation();
                 evt.preventDefault();
                 
-                const index = Array.from(this.gridElem.children).indexOf(thumbnail);
+                Array.from(this.gridElem.children).indexOf(thumbnail);
                 
                 if(!thumbnail.classList.contains('fpd-loading')) {
                     
+                    // Disabled localStorage storage for previously uploaded images
+                    /*
                     var storageImages = JSON.parse(window.localStorage.getItem('fpd_uploaded_images'));
     
                     storageImages.splice(index, 1);
                     window.localStorage.setItem('fpd_uploaded_images', JSON.stringify(storageImages));
+                    */
                     
                     if(thumbnail.xhr) {
                         thumbnail.xhr.abort();
@@ -12167,10 +12056,13 @@ class ImagesModule extends EventTarget {
             
         }
 
+        // QR Code module disabled
+        /*
         new QRCodeModule(
             fpdInstance,
             tabContents.find( t => t.dataset.context == 'qr-code' )
-        );
+        )
+        */
         
         //hide tabs if only one tab is available
         if(tabs.filter( t => !t.classList.contains('fpd-hidden')).length < 2) {

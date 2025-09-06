@@ -157,10 +157,13 @@ export default class ImagesModule extends EventTarget {
             
         }
 
+        // QR Code module disabled
+        /*
         new QRCodeModule(
             fpdInstance,
             tabContents.find( t => t.dataset.context == 'qr-code' )
         )
+        */
         
         //hide tabs if only one tab is available
         if(tabs.filter( t => !t.classList.contains('fpd-hidden')).length < 2) {

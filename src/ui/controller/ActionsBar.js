@@ -528,6 +528,8 @@ export default class ActionsBar extends EventTarget {
 		}
 		else if (action === 'qr-code') {
 
+			// QR Code functionality disabled
+			/*
 			const existingModal = this.fpdInstance.container.querySelector('.fpd-modal-internal');
 			if(existingModal)
 				existingModal.remove();
@@ -555,6 +557,7 @@ export default class ActionsBar extends EventTarget {
 					
 				}
 			)
+			*/
 
 			
 		}
